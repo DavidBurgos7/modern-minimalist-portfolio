@@ -5,6 +5,8 @@ import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import AstroIcon from "./icons/AstroIcon.astro"
+import ExpoIcon from "./icons/ExpoIcon.astro"
+import IonicIcon from "./icons/IonicIcon.astro"
 
 const TAGS = {
   NEXT: {
@@ -22,25 +24,42 @@ const TAGS = {
     class: "bg-[#003159] ",
     icon: AstroIcon,
   },
+  REACTNATIVE: {
+    name: "Expo & React Native",
+    class: "bg-emerald-700 text-white",
+    icon: ExpoIcon,
+  },
+  IONIC: {
+    name: "Ionic Angular",
+    class: "bg-red-700 text-white",
+    icon: IonicIcon,
+  },
 }
 const PROJECTS = [
   {
     title: "WORK IN PROGRESS - ORION POS",
     description:
       "This project is currently a WIP and will be released soon. It's a POS system for small businesses. It's built with Next.js.",
-    link: "",
-    github: "",
-    image: "",
+    link: "https://orion-generic-pos.vercel.app/register",
+    github: "https://github.com/DavidBurgos7/orion-generic-pos-react",
+    image: "/projects/orionpos.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
     title: "WORK IN PROGRESS - ORION QR Code generator & Reader.",
     description:
       "This is currently a WIP and will be released soon. It's a QR code generator and reader. It's built with ReactNative with Expo.",
-    link: "",
-    image: "",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    github: "https://github.com/DavidBurgos7/orion-qr-code-scan",
+    image: "/projects/orionqrcode.gif",
+    tags: [TAGS.REACTNATIVE],
   },
+  {
+    title: "KlickTrack - POS + Compliance Translator | Client Work",
+    description: "KlickTrack is a powerful retail cannabis point of sale and business intelligence tool. Bringing cannabis retailers much-needed flexibility allowing them to break away from the register and take their sales force to the floor opening up endless avenues to streamline your shop.",
+    link: "https://apps.apple.com/us/app/klicktrack/id1317621600?l=es",
+    image: "/projects/klicktrack.webp",
+    tags: [TAGS.IONIC],
+  }
 ]
 ---
 
@@ -49,7 +68,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-emerald-800 lg:hover:border-emerald-700 lg:hover:bg-emarald-800/50">
       <img alt="Project Image" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
