@@ -7,6 +7,10 @@ import LinkButton from "./LinkButton.astro"
 import AstroIcon from "./icons/AstroIcon.astro"
 import ExpoIcon from "./icons/ExpoIcon.astro"
 import IonicIcon from "./icons/IonicIcon.astro"
+import ClerkIcon from "./icons/ClerkIcon.astro"
+import NpmIcon from "./icons/NpmIcon.astro"
+import TypeScriptIcon from "./icons/TypeScriptIcon.astro"
+import ClaudeAiIcon from "./icons/ClaudeAiIcon.astro"
 
 const TAGS = {
   NEXT: {
@@ -34,8 +38,37 @@ const TAGS = {
     class: "bg-red-700 text-white",
     icon: IonicIcon,
   },
+  CLERK: {
+    name: "Clerk",
+    class: "bg-purple-500 text-slate-700",
+    icon: ClerkIcon
+  },
+  NPM: {
+    name: "npm",
+    class: "bg-[#CB3837] text-white",
+    icon: NpmIcon
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#003159] text-white",
+    icon: TypeScriptIcon
+  },
+  CLAUDE: {
+    name: "Claude AI",
+    class: "bg-slate-700 text-white",
+    icon: ClaudeAiIcon
+  }
 }
 const PROJECTS = [
+  {
+    title: "Npm find package info - MCP Server for LLMs",
+    description:
+      "A npm package that contains an MCP server that allows LLMs to find information about npm packages using the npm registry. It uses the npm registry API to fetch package information and returns it in a structured format.",
+    link: "https://www.npmjs.com/package/@imburgos7/server-npm-find-package-info",
+    github: "https://github.com/DavidBurgos7/server-npm-find-package-info",
+    image: "/projects/server-npm-mcp.webp",
+    tags: [TAGS.NPM, TAGS.TYPESCRIPT, TAGS.CLAUDE],
+  },
   {
     title: "David's Sports Store - E-commerce",
     description:
@@ -43,7 +76,7 @@ const PROJECTS = [
     link: "https://sports-store-five.vercel.app/",
     github: "https://github.com/DavidBurgos7/sports-store",
     image: "/projects/sportsstore.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.CLERK],
   },
   {
     title: "WORK IN PROGRESS - ORION POS",
